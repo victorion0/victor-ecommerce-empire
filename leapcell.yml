@@ -1,0 +1,5 @@
+name: ecommerce-empire
+region: us-east-1
+runtime: nodejs20
+build: npm install
+entrypoint: npm start
