@@ -31,8 +31,12 @@ let redisClient;
 
 if (process.env.REDIS_URL && process.env.REDIS_URL.includes('upstash')) {
   redisClient = redis.createClient({
-    url: process.env.REDIS_URL
-  });
+  url: process.env.REDIS_URL,
+  socket: {
+    tls: true,
+    rejectUnauthorized: false   // ← This one kill "Socket closed unexpectedly"
+  }
+});
   redisClient.on('error', (err) => console.log('Real Redis error:', err.message));
   redisClient.connect().catch(console.error);
 } else {
