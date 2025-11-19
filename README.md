@@ -36,7 +36,7 @@ npm run dev
 
 ### NEXT MOVES TO $100M
 
-| Type | What I Do Next |
+| Type | WhaDo Next |
 |------|-----------------|
 | `FRONTEND` | Build React + Tailwind store (beautiful UI) |
 | `DOMAIN`   | Buy victorshop.com + connect |
